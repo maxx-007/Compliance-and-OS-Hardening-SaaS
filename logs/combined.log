@@ -1,0 +1,57 @@
+{"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"level":"error","message":"❌ MySQL connection failed: Access denied for user 'root'@'localhost' (using password: YES)","service":"compliance-audit-tool","sqlState":"28000","stack":"Error: Access denied for user 'root'@'localhost' (using password: YES)\n    at Object.createConnectionPromise [as createConnection] (c:\\Users\\krish hadkar\\Downloads\\compliance_mvp\\node_modules\\mysql2\\promise.js:19:31)\n    at connectMySQL (c:\\Users\\krish hadkar\\Downloads\\compliance_mvp\\src\\config\\mysql.js:8:30)\n    at startServer (c:\\Users\\krish hadkar\\Downloads\\compliance_mvp\\server.js:51:11)\n    at Object.<anonymous> (c:\\Users\\krish hadkar\\Downloads\\compliance_mvp\\server.js:77:1)\n    at Module._compile (node:internal/modules/cjs/loader:1554:14)\n    at Object..js (node:internal/modules/cjs/loader:1706:10)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)\n    at Function._load (node:internal/modules/cjs/loader:1108:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)","timestamp":"2025-08-27 16:12:06"}
+{"level":"error","message":"❌ MySQL connection failed:","service":"compliance-audit-tool","timestamp":"2025-08-27 16:14:07"}
+{"level":"warn","message":"⚠️ MySQL connection failed (continuing without MySQL):","service":"compliance-audit-tool","timestamp":"2025-08-27 16:14:07"}
+{"level":"info","message":"Created collection: system_logs","service":"compliance-audit-tool","timestamp":"2025-08-27 16:14:07"}
+{"level":"info","message":"Created collection: config_data","service":"compliance-audit-tool","timestamp":"2025-08-27 16:14:07"}
+{"level":"info","message":"Created collection: scan_results","service":"compliance-audit-tool","timestamp":"2025-08-27 16:14:07"}
+{"level":"info","message":"Created collection: audit_logs","service":"compliance-audit-tool","timestamp":"2025-08-27 16:14:07"}
+{"level":"info","message":"✅ MongoDB collections and indexes initialized successfully","service":"compliance-audit-tool","timestamp":"2025-08-27 16:14:07"}
+{"level":"info","message":"✅ MongoDB connected successfully","service":"compliance-audit-tool","timestamp":"2025-08-27 16:14:07"}
+{"level":"info","message":"🚀 Compliance Audit Tool server running on port 3000","service":"compliance-audit-tool","timestamp":"2025-08-27 16:14:07"}
+{"level":"info","message":"📊 Environment: development","service":"compliance-audit-tool","timestamp":"2025-08-27 16:14:07"}
+{"level":"info","message":"🔗 Health check: http://localhost:3000/api/health","service":"compliance-audit-tool","timestamp":"2025-08-27 16:14:07"}
+{"level":"info","message":"💾 Database status: MySQL=Disconnected, MongoDB=Connected","service":"compliance-audit-tool","timestamp":"2025-08-27 16:14:07"}
+{"level":"warn","message":"MySQL connection not available","service":"compliance-audit-tool","timestamp":"2025-08-27 16:14:19"}
+{"level":"info","message":"Health check performed - Status: degraded","service":"compliance-audit-tool","timestamp":"2025-08-27 16:14:19"}
+{"level":"info","message":"::1 - - [27/Aug/2025:10:44:19 +0000] \"GET /api/health HTTP/1.1\" 200 287 \"-\" \"curl/8.14.1\"","service":"compliance-audit-tool","timestamp":"2025-08-27 16:14:19"}
+{"level":"info","message":"JSON data uploaded successfully - ID: upload_metule54_8izy95, Type: config, Source: system_scan","service":"compliance-audit-tool","timestamp":"2025-08-27 16:14:28"}
+{"level":"info","message":"::1 - - [27/Aug/2025:10:44:28 +0000] \"POST /api/upload/json HTTP/1.1\" 201 212 \"-\" \"curl/8.14.1\"","service":"compliance-audit-tool","timestamp":"2025-08-27 16:14:28"}
+{"level":"info","message":"::1 - - [27/Aug/2025:10:44:37 +0000] \"GET /api/upload/history HTTP/1.1\" 200 373 \"-\" \"curl/8.14.1\"","service":"compliance-audit-tool","timestamp":"2025-08-27 16:14:37"}
+{"level":"info","message":"File uploaded successfully - ID: upload_metulrlq_mhwq6g, File: sample_linux_output.json","service":"compliance-audit-tool","timestamp":"2025-08-27 16:14:45"}
+{"level":"info","message":"::1 - - [27/Aug/2025:10:44:45 +0000] \"POST /api/upload/files HTTP/1.1\" 201 295 \"-\" \"curl/8.14.1\"","service":"compliance-audit-tool","timestamp":"2025-08-27 16:14:45"}
+{"level":"error","message":"❌ MySQL connection failed:","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:31"}
+{"level":"warn","message":"⚠️ MySQL connection failed (continuing without MySQL):","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:31"}
+{"level":"info","message":"✅ MongoDB collections and indexes initialized successfully","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:31"}
+{"level":"info","message":"✅ MongoDB connected successfully","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:31"}
+{"level":"info","message":"🚀 Compliance Audit Tool server running on port 3000","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:31"}
+{"level":"info","message":"📊 Environment: development","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:31"}
+{"level":"info","message":"🔗 Health check: http://localhost:3000/api/health","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:31"}
+{"level":"info","message":"💾 Database status: MySQL=Disconnected, MongoDB=Connected","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:31"}
+{"level":"info","message":"::1 - - [27/Aug/2025:10:50:42 +0000] \"GET /api/compliance/frameworks HTTP/1.1\" 200 134 \"-\" \"curl/8.14.1\"","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:42"}
+{"level":"info","message":"Framework registered: CIS Benchmarks (CIS)","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:53"}
+{"level":"info","message":"Framework registered: ISO 27001 (ISO27001)","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:53"}
+{"level":"info","message":"Rule registered: CIS:CIS-1.1.1 - Ensure mounting of cramfs filesystems is disabled","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:53"}
+{"level":"info","message":"Rule registered: CIS:CIS-2.2.1 - Ensure X Window System is not installed","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:53"}
+{"level":"info","message":"Rule registered: CIS:CIS-5.2.1 - Ensure permissions on /etc/ssh/sshd_config are configured","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:53"}
+{"level":"info","message":"Rule registered: CIS:CIS-5.2.4 - Ensure SSH root login is disabled","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:53"}
+{"level":"info","message":"Rule registered: CIS:CIS-5.3.1 - Ensure password creation requirements are configured","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:53"}
+{"level":"info","message":"Rule registered: CIS:CIS-3.5.1 - Ensure firewall is active","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:53"}
+{"level":"info","message":"Rule registered: ISO27001:ISO-A.9.1.1 - Access control policy","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:53"}
+{"level":"info","message":"Rule registered: ISO27001:ISO-A.12.4.1 - Event logging","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:53"}
+{"level":"info","message":"Rule registered: ISO27001:ISO-A.13.1.1 - Network controls","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:53"}
+{"level":"info","message":"Rule registered: ISO27001:ISO-A.8.2.1 - Information classification","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:53"}
+{"level":"info","message":"Rule registered: ISO27001:ISO-A.12.6.1 - Management of technical vulnerabilities","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:53"}
+{"level":"info","message":"Compliance service initialized with 11 rules across 2 frameworks","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:53"}
+{"level":"info","message":"Compliance check completed: 2/11 passed, Risk Score: 82%","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:53"}
+{"level":"info","message":"Sample compliance check executed via API","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:53"}
+{"level":"info","message":"::1 - - [27/Aug/2025:10:50:53 +0000] \"POST /api/compliance/check/sample HTTP/1.1\" 200 14940 \"-\" \"curl/8.14.1\"","service":"compliance-audit-tool","timestamp":"2025-08-27 16:20:53"}
+{"level":"info","message":"::1 - - [27/Aug/2025:10:51:01 +0000] \"GET /api/compliance/frameworks HTTP/1.1\" 200 388 \"-\" \"curl/8.14.1\"","service":"compliance-audit-tool","timestamp":"2025-08-27 16:21:01"}
+{"level":"info","message":"::1 - - [27/Aug/2025:10:51:19 +0000] \"GET /api/compliance/frameworks/CIS/rules HTTP/1.1\" 200 2007 \"-\" \"curl/8.14.1\"","service":"compliance-audit-tool","timestamp":"2025-08-27 16:21:19"}
+{"level":"info","message":"JSON data uploaded successfully - ID: upload_metuujm9_ye40yg, Type: config, Source: system_scan","service":"compliance-audit-tool","timestamp":"2025-08-27 16:21:35"}
+{"level":"info","message":"::1 - - [27/Aug/2025:10:51:35 +0000] \"POST /api/upload/json HTTP/1.1\" 201 213 \"-\" \"curl/8.14.1\"","service":"compliance-audit-tool","timestamp":"2025-08-27 16:21:35"}
+{"level":"info","message":"Compliance check completed: 5/11 passed, Risk Score: 55%","service":"compliance-audit-tool","timestamp":"2025-08-27 16:21:43"}
+{"level":"info","message":"Compliance results stored for session: session_metuupmk_05ltau","service":"compliance-audit-tool","timestamp":"2025-08-27 16:21:43"}
+{"level":"info","message":"Compliance check completed for upload upload_metuujm9_ye40yg: 5/11 passed","service":"compliance-audit-tool","timestamp":"2025-08-27 16:21:43"}
+{"level":"info","message":"Compliance check API called for upload: upload_metuujm9_ye40yg","service":"compliance-audit-tool","timestamp":"2025-08-27 16:21:43"}
+{"level":"info","message":"::1 - - [27/Aug/2025:10:51:43 +0000] \"POST /api/compliance/check HTTP/1.1\" 200 11983 \"-\" \"curl/8.14.1\"","service":"compliance-audit-tool","timestamp":"2025-08-27 16:21:43"}
+{"level":"info","message":"::1 - - [27/Aug/2025:10:51:52 +0000] \"GET /api/compliance/history HTTP/1.1\" 200 6670 \"-\" \"curl/8.14.1\"","service":"compliance-audit-tool","timestamp":"2025-08-27 16:21:52"}
