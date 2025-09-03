@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head><meta charset='utf-8'><title>Upload Demo</title></head>
+<body>
+<h3>Upload collector JSON</h3>
+<input type='file' id='f' accept='application/json' />
+<button onclick='upload()'>Upload</button>
+<pre id='out'></pre>
+<script>
+async function upload(){const file=document.getElementById('f').files[0]; if(!file){alert('choose file');return;} const fd=new FormData(); fd.append('file',file); const res=await fetch('/upload-file',{method:'POST',body:fd}); const txt=await res.text(); document.getElementById('out').textContent=txt}
+</script>
+</body></html>
