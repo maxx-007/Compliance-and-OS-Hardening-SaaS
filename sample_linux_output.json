@@ -1,0 +1,15 @@
+{
+  "asset_id": "demo-linux",
+  "os": "linux",
+  "timestamp": "2025-08-26T09:30:00Z",
+  "checks": [
+    {
+      "id": "PWD_MINLEN",
+      "value": 14
+    },
+    {
+      "id": "AUDITD_RUNNING",
+      "value": true
+    }
+  ]
+}

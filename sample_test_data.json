@@ -1,0 +1,161 @@
+{
+  "sample_config_upload": {
+    "data": {
+      "system_info": {
+        "hostname": "web-server-01",
+        "os": "Ubuntu 20.04 LTS",
+        "kernel": "5.4.0-74-generic",
+        "architecture": "x86_64"
+      },
+      "security_config": {
+        "ssh": {
+          "port": 22,
+          "root_login": "no",
+          "password_authentication": "yes",
+          "permit_empty_passwords": "no",
+          "max_auth_tries": 3
+        },
+        "firewall": {
+          "status": "active",
+          "default_incoming": "deny",
+          "default_outgoing": "allow",
+          "rules": [
+            {"port": 22, "protocol": "tcp", "action": "allow", "source": "192.168.1.0/24"},
+            {"port": 80, "protocol": "tcp", "action": "allow", "source": "any"},
+            {"port": 443, "protocol": "tcp", "action": "allow", "source": "any"}
+          ]
+        },
+        "users": [
+          {"username": "admin", "uid": 1000, "groups": ["sudo", "admin"], "shell": "/bin/bash"},
+          {"username": "webuser", "uid": 1001, "groups": ["www-data"], "shell": "/bin/bash"},
+          {"username": "guest", "uid": 1002, "groups": ["users"], "shell": "/bin/sh"}
+        ],
+        "password_policy": {
+          "min_length": 8,
+          "require_uppercase": true,
+          "require_lowercase": true,
+          "require_numbers": true,
+          "require_special_chars": false,
+          "max_age_days": 90,
+          "history_count": 5
+        }
+      },
+      "services": {
+        "running": ["ssh", "nginx", "mysql", "fail2ban"],
+        "stopped": ["apache2", "ftp"],
+        "enabled": ["ssh", "nginx", "mysql", "fail2ban"],
+        "disabled": ["apache2", "ftp", "telnet"]
+      },
+      "network": {
+        "interfaces": [
+          {"name": "eth0", "ip": "192.168.1.100", "netmask": "255.255.255.0", "status": "up"},
+          {"name": "lo", "ip": "127.0.0.1", "netmask": "255.0.0.0", "status": "up"}
+        ],
+        "open_ports": [22, 80, 443, 3306],
+        "listening_services": [
+          {"port": 22, "service": "ssh", "protocol": "tcp"},
+          {"port": 80, "service": "nginx", "protocol": "tcp"},
+          {"port": 443, "service": "nginx", "protocol": "tcp"},
+          {"port": 3306, "service": "mysql", "protocol": "tcp"}
+        ]
+      }
+    },
+    "source": "system_scan",
+    "type": "config",
+    "metadata": {
+      "scan_tool": "custom_scanner",
+      "scan_version": "1.0",
+      "scan_date": "2024-01-15T10:30:00Z",
+      "target_system": "web-server-01"
+    }
+  },
+  "sample_log_upload": {
+    "data": [
+      {
+        "timestamp": "2024-01-15T10:15:23Z",
+        "level": "INFO",
+        "source": "auth",
+        "message": "User admin logged in successfully",
+        "details": {"ip": "192.168.1.50", "method": "ssh"}
+      },
+      {
+        "timestamp": "2024-01-15T10:16:45Z",
+        "level": "WARNING",
+        "source": "auth",
+        "message": "Failed login attempt",
+        "details": {"ip": "203.0.113.42", "username": "root", "method": "ssh"}
+      },
+      {
+        "timestamp": "2024-01-15T10:17:12Z",
+        "level": "ERROR",
+        "source": "firewall",
+        "message": "Blocked connection attempt",
+        "details": {"ip": "203.0.113.42", "port": 23, "protocol": "tcp"}
+      },
+      {
+        "timestamp": "2024-01-15T10:18:33Z",
+        "level": "INFO",
+        "source": "system",
+        "message": "Service nginx restarted",
+        "details": {"service": "nginx", "status": "active"}
+      }
+    ],
+    "source": "log_file",
+    "type": "logs",
+    "metadata": {
+      "log_file": "/var/log/security.log",
+      "collection_date": "2024-01-15T10:30:00Z",
+      "log_format": "json"
+    }
+  },
+  "sample_cloud_scan": {
+    "data": {
+      "aws_account": "123456789012",
+      "region": "us-east-1",
+      "scan_timestamp": "2024-01-15T10:30:00Z",
+      "resources": {
+        "ec2_instances": [
+          {
+            "instance_id": "i-1234567890abcdef0",
+            "instance_type": "t3.medium",
+            "state": "running",
+            "security_groups": ["sg-12345678"],
+            "public_ip": "203.0.113.100",
+            "private_ip": "10.0.1.100",
+            "tags": {"Name": "WebServer", "Environment": "Production"}
+          }
+        ],
+        "security_groups": [
+          {
+            "group_id": "sg-12345678",
+            "group_name": "web-server-sg",
+            "inbound_rules": [
+              {"port": 80, "protocol": "tcp", "source": "0.0.0.0/0"},
+              {"port": 443, "protocol": "tcp", "source": "0.0.0.0/0"},
+              {"port": 22, "protocol": "tcp", "source": "192.168.1.0/24"}
+            ],
+            "outbound_rules": [
+              {"port": "all", "protocol": "all", "destination": "0.0.0.0/0"}
+            ]
+          }
+        ],
+        "s3_buckets": [
+          {
+            "bucket_name": "company-data-bucket",
+            "public_access_blocked": true,
+            "encryption": "AES256",
+            "versioning": "enabled",
+            "logging": "enabled"
+          }
+        ]
+      }
+    },
+    "source": "cloud_scan",
+    "type": "scan_results",
+    "metadata": {
+      "scan_tool": "aws_config",
+      "scan_version": "2.0",
+      "account_alias": "production-account"
+    }
+  }
+}

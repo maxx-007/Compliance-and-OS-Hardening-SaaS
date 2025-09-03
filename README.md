@@ -1,1 +1,3 @@
-# Compliance-and-OS-Hardening-SaaS
+# Compliance MVP
+
+See README in project for details.

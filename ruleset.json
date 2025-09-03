@@ -1,0 +1,22 @@
+[
+  {
+    "framework": "ISO27001",
+    "control_id": "A.9.2.2",
+    "title": "Password min length",
+    "evidence": [
+      "PWD_MINLEN"
+    ],
+    "rule": "PWD_MINLEN >= 12",
+    "severity": "Medium"
+  },
+  {
+    "framework": "DPDP",
+    "control_id": "SEC-LOG-RET",
+    "title": "Audit logging enabled",
+    "evidence": [
+      "AUDITD_RUNNING"
+    ],
+    "rule": "AUDITD_RUNNING == True",
+    "severity": "High"
+  }
+]
