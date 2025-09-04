@@ -1,0 +1,701 @@
+{
+  "company_A": {
+    "CIS": {
+      "compliance_pct": 100.0,
+      "total_weight": 43,
+      "score_weight": 43,
+      "details": [
+        {
+          "rule_id": "CIS-1",
+          "description": "Minimum password length >= 12",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Set system password policy minimum length to 12 or more."
+        },
+        {
+          "rule_id": "CIS-2",
+          "description": "Password complexity required",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Enable password complexity (upper/lower/digit/special) in PAM/AD policies."
+        },
+        {
+          "rule_id": "CIS-3",
+          "description": "Firewall enabled",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Enable host/network firewall and ensure default deny rules are applied."
+        },
+        {
+          "rule_id": "CIS-4",
+          "description": "Audit logging enabled",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Enable auditd or Windows Event forwarders to central SIEM."
+        },
+        {
+          "rule_id": "CIS-5",
+          "description": "Disk encryption enabled",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Enable LUKS/BitLocker or full-disk encryption for servers with sensitive data."
+        },
+        {
+          "rule_id": "CIS-6",
+          "description": "No insecure services like ftp running",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Stop and remove FTP service; use SFTP or secure alternatives."
+        },
+        {
+          "rule_id": "CIS-7",
+          "description": "SSH root login disabled",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Set PermitRootLogin no in /etc/ssh/sshd_config and restart sshd."
+        },
+        {
+          "rule_id": "CIS-8",
+          "description": "OS patch age <= 30 days",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Ensure systems are patched automatically or within 30 days via patch management."
+        },
+        {
+          "rule_id": "CIS-9",
+          "description": "Open DB ports not public (3306 not in open_ports)",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Close public DB ports or restrict via security groups/firewall."
+        },
+        {
+          "rule_id": "CIS-10",
+          "description": "Audit rules present (auditd)",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Configure audit rules for critical files and processes."
+        }
+      ]
+    },
+    "ISO27001": {
+      "compliance_pct": 100.0,
+      "total_weight": 41,
+      "score_weight": 41,
+      "details": [
+        {
+          "rule_id": "ISO-1",
+          "description": "Access reviews performed within 90 days",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Schedule and record access reviews every <= 90 days."
+        },
+        {
+          "rule_id": "ISO-2",
+          "description": "Data backup policy exists and tested",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Implement backup policy and run restore tests periodically."
+        },
+        {
+          "rule_id": "ISO-3",
+          "description": "Incident response plan exists",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Draft & publish an incident response playbook and owner matrix."
+        },
+        {
+          "rule_id": "ISO-4",
+          "description": "Incident response tested in last 12 months",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Conduct IR tabletop/exercise within last 12 months."
+        },
+        {
+          "rule_id": "ISO-5",
+          "description": "Endpoint protection (AV) running",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Deploy endpoint protection on all servers/workstations."
+        },
+        {
+          "rule_id": "ISO-6",
+          "description": "Encryption at rest for sensitive DBs",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Enable DB encryption (TDE or filesystem encryption) for sensitive DBs."
+        },
+        {
+          "rule_id": "ISO-7",
+          "description": "Secure configuration baseline applied (CIS)",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Apply and enforce CIS benchmarks baseline via config management."
+        },
+        {
+          "rule_id": "ISO-8",
+          "description": "Segregation of duties enforced for admin roles",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Implement role separation and approval workflows."
+        },
+        {
+          "rule_id": "ISO-9",
+          "description": "Change management process enforced",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Enforce change approvals and track them in ticketing system."
+        },
+        {
+          "rule_id": "ISO-10",
+          "description": "Third-party/vendor risk assessments done",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Perform vendor risk reviews and track remediation."
+        }
+      ]
+    },
+    "RBI": {
+      "compliance_pct": 100.0,
+      "total_weight": 43,
+      "score_weight": 43,
+      "details": [
+        {
+          "rule_id": "RBI-1",
+          "description": "MFA enabled for critical systems",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Enable MFA for admin & privileged accounts using authenticator/OTP/hardware tokens."
+        },
+        {
+          "rule_id": "RBI-2",
+          "description": "Transaction logs retained for 5 years",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Configure retention for transaction logs >= 5 years in secure storage."
+        },
+        {
+          "rule_id": "RBI-3",
+          "description": "Quarterly VAPT",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Run VAPT quarterly and remediate critical findings."
+        },
+        {
+          "rule_id": "RBI-4",
+          "description": "Encryption of customer data in transit and at rest",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Enable TLS 1.2+ for transit and AES-256 for data at rest."
+        },
+        {
+          "rule_id": "RBI-5",
+          "description": "Dedicated SOC monitoring in place",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Deploy SOC or MSSP with 24/7 monitoring on critical channels."
+        },
+        {
+          "rule_id": "RBI-6",
+          "description": "Incident reporting to CERT-In/RBI within timelines",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Report incidents to CERT-In/RBI within mandated timelines."
+        },
+        {
+          "rule_id": "RBI-7",
+          "description": "Secure coding & SAST in CI pipeline",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Integrate SAST and fix findings during CI builds."
+        },
+        {
+          "rule_id": "RBI-8",
+          "description": "Customer data access logged and reviewed monthly",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Review access logs monthly for sensitive data access."
+        },
+        {
+          "rule_id": "RBI-9",
+          "description": "DLP controls in place",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Deploy DLP for exfiltration control on endpoints and gateways."
+        },
+        {
+          "rule_id": "RBI-10",
+          "description": "BCP tested annually",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Test BCP/DR annually and document results."
+        }
+      ]
+    }
+  },
+  "company_B": {
+    "CIS": {
+      "compliance_pct": 0.0,
+      "total_weight": 43,
+      "score_weight": 0,
+      "details": [
+        {
+          "rule_id": "CIS-1",
+          "description": "Minimum password length >= 12",
+          "status": "FAIL",
+          "message": "Expected >= 12, got 10",
+          "remediation": "Set system password policy minimum length to 12 or more."
+        },
+        {
+          "rule_id": "CIS-2",
+          "description": "Password complexity required",
+          "status": "FAIL",
+          "message": "Expected True, got False",
+          "remediation": "Enable password complexity (upper/lower/digit/special) in PAM/AD policies."
+        },
+        {
+          "rule_id": "CIS-3",
+          "description": "Firewall enabled",
+          "status": "FAIL",
+          "message": "Expected True, got False",
+          "remediation": "Enable host/network firewall and ensure default deny rules are applied."
+        },
+        {
+          "rule_id": "CIS-4",
+          "description": "Audit logging enabled",
+          "status": "FAIL",
+          "message": "Expected True, got False",
+          "remediation": "Enable auditd or Windows Event forwarders to central SIEM."
+        },
+        {
+          "rule_id": "CIS-5",
+          "description": "Disk encryption enabled",
+          "status": "FAIL",
+          "message": "Expected True, got False",
+          "remediation": "Enable LUKS/BitLocker or full-disk encryption for servers with sensitive data."
+        },
+        {
+          "rule_id": "CIS-6",
+          "description": "No insecure services like ftp running",
+          "status": "FAIL",
+          "message": "Expected stopped, got running",
+          "remediation": "Stop and remove FTP service; use SFTP or secure alternatives."
+        },
+        {
+          "rule_id": "CIS-7",
+          "description": "SSH root login disabled",
+          "status": "FAIL",
+          "message": "Expected False, got True",
+          "remediation": "Set PermitRootLogin no in /etc/ssh/sshd_config and restart sshd."
+        },
+        {
+          "rule_id": "CIS-8",
+          "description": "OS patch age <= 30 days",
+          "status": "FAIL",
+          "message": "Expected <= 30, got 50",
+          "remediation": "Ensure systems are patched automatically or within 30 days via patch management."
+        },
+        {
+          "rule_id": "CIS-9",
+          "description": "Open DB ports not public (3306 not in open_ports)",
+          "status": "FAIL",
+          "message": "Value 3306 present in list",
+          "remediation": "Close public DB ports or restrict via security groups/firewall."
+        },
+        {
+          "rule_id": "CIS-10",
+          "description": "Audit rules present (auditd)",
+          "status": "FAIL",
+          "message": "Expected True, got False",
+          "remediation": "Configure audit rules for critical files and processes."
+        }
+      ]
+    },
+    "ISO27001": {
+      "compliance_pct": 0.0,
+      "total_weight": 41,
+      "score_weight": 0,
+      "details": [
+        {
+          "rule_id": "ISO-1",
+          "description": "Access reviews performed within 90 days",
+          "status": "FAIL",
+          "message": "Expected <= 90, got 200",
+          "remediation": "Schedule and record access reviews every <= 90 days."
+        },
+        {
+          "rule_id": "ISO-2",
+          "description": "Data backup policy exists and tested",
+          "status": "FAIL",
+          "message": "Expected True, got False",
+          "remediation": "Implement backup policy and run restore tests periodically."
+        },
+        {
+          "rule_id": "ISO-3",
+          "description": "Incident response plan exists",
+          "status": "FAIL",
+          "message": "Expected True, got False",
+          "remediation": "Draft & publish an incident response playbook and owner matrix."
+        },
+        {
+          "rule_id": "ISO-4",
+          "description": "Incident response tested in last 12 months",
+          "status": "FAIL",
+          "message": "Expected <= 365, got 800",
+          "remediation": "Conduct IR tabletop/exercise within last 12 months."
+        },
+        {
+          "rule_id": "ISO-5",
+          "description": "Endpoint protection (AV) running",
+          "status": "FAIL",
+          "message": "Expected True, got False",
+          "remediation": "Deploy endpoint protection on all servers/workstations."
+        },
+        {
+          "rule_id": "ISO-6",
+          "description": "Encryption at rest for sensitive DBs",
+          "status": "FAIL",
+          "message": "Expected True, got False",
+          "remediation": "Enable DB encryption (TDE or filesystem encryption) for sensitive DBs."
+        },
+        {
+          "rule_id": "ISO-7",
+          "description": "Secure configuration baseline applied (CIS)",
+          "status": "FAIL",
+          "message": "Expected True, got False",
+          "remediation": "Apply and enforce CIS benchmarks baseline via config management."
+        },
+        {
+          "rule_id": "ISO-8",
+          "description": "Segregation of duties enforced for admin roles",
+          "status": "FAIL",
+          "message": "Expected True, got False",
+          "remediation": "Implement role separation and approval workflows."
+        },
+        {
+          "rule_id": "ISO-9",
+          "description": "Change management process enforced",
+          "status": "FAIL",
+          "message": "Expected True, got False",
+          "remediation": "Enforce change approvals and track them in ticketing system."
+        },
+        {
+          "rule_id": "ISO-10",
+          "description": "Third-party/vendor risk assessments done",
+          "status": "FAIL",
+          "message": "Expected True, got False",
+          "remediation": "Perform vendor risk reviews and track remediation."
+        }
+      ]
+    },
+    "RBI": {
+      "compliance_pct": 0.0,
+      "total_weight": 43,
+      "score_weight": 0,
+      "details": [
+        {
+          "rule_id": "RBI-1",
+          "description": "MFA enabled for critical systems",
+          "status": "FAIL",
+          "message": "Expected True, got False",
+          "remediation": "Enable MFA for admin & privileged accounts using authenticator/OTP/hardware tokens."
+        },
+        {
+          "rule_id": "RBI-2",
+          "description": "Transaction logs retained for 5 years",
+          "status": "FAIL",
+          "message": "Expected >= 1825, got 365",
+          "remediation": "Configure retention for transaction logs >= 5 years in secure storage."
+        },
+        {
+          "rule_id": "RBI-3",
+          "description": "Quarterly VAPT",
+          "status": "FAIL",
+          "message": "Expected <= 90, got 400",
+          "remediation": "Run VAPT quarterly and remediate critical findings."
+        },
+        {
+          "rule_id": "RBI-4",
+          "description": "Encryption of customer data in transit and at rest",
+          "status": "FAIL",
+          "message": "Expected True, got False",
+          "remediation": "Enable TLS 1.2+ for transit and AES-256 for data at rest."
+        },
+        {
+          "rule_id": "RBI-5",
+          "description": "Dedicated SOC monitoring in place",
+          "status": "FAIL",
+          "message": "Expected True, got False",
+          "remediation": "Deploy SOC or MSSP with 24/7 monitoring on critical channels."
+        },
+        {
+          "rule_id": "RBI-6",
+          "description": "Incident reporting to CERT-In/RBI within timelines",
+          "status": "FAIL",
+          "message": "Expected <= 7, got 20",
+          "remediation": "Report incidents to CERT-In/RBI within mandated timelines."
+        },
+        {
+          "rule_id": "RBI-7",
+          "description": "Secure coding & SAST in CI pipeline",
+          "status": "FAIL",
+          "message": "Expected True, got False",
+          "remediation": "Integrate SAST and fix findings during CI builds."
+        },
+        {
+          "rule_id": "RBI-8",
+          "description": "Customer data access logged and reviewed monthly",
+          "status": "FAIL",
+          "message": "Expected <= 30, got 120",
+          "remediation": "Review access logs monthly for sensitive data access."
+        },
+        {
+          "rule_id": "RBI-9",
+          "description": "DLP controls in place",
+          "status": "FAIL",
+          "message": "Expected True, got False",
+          "remediation": "Deploy DLP for exfiltration control on endpoints and gateways."
+        },
+        {
+          "rule_id": "RBI-10",
+          "description": "BCP tested annually",
+          "status": "FAIL",
+          "message": "Expected <= 365, got 800",
+          "remediation": "Test BCP/DR annually and document results."
+        }
+      ]
+    }
+  },
+  "company_C": {
+    "CIS": {
+      "compliance_pct": 90.7,
+      "total_weight": 43,
+      "score_weight": 39,
+      "details": [
+        {
+          "rule_id": "CIS-1",
+          "description": "Minimum password length >= 12",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Set system password policy minimum length to 12 or more."
+        },
+        {
+          "rule_id": "CIS-2",
+          "description": "Password complexity required",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Enable password complexity (upper/lower/digit/special) in PAM/AD policies."
+        },
+        {
+          "rule_id": "CIS-3",
+          "description": "Firewall enabled",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Enable host/network firewall and ensure default deny rules are applied."
+        },
+        {
+          "rule_id": "CIS-4",
+          "description": "Audit logging enabled",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Enable auditd or Windows Event forwarders to central SIEM."
+        },
+        {
+          "rule_id": "CIS-5",
+          "description": "Disk encryption enabled",
+          "status": "FAIL",
+          "message": "Expected True, got False",
+          "remediation": "Enable LUKS/BitLocker or full-disk encryption for servers with sensitive data."
+        },
+        {
+          "rule_id": "CIS-6",
+          "description": "No insecure services like ftp running",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Stop and remove FTP service; use SFTP or secure alternatives."
+        },
+        {
+          "rule_id": "CIS-7",
+          "description": "SSH root login disabled",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Set PermitRootLogin no in /etc/ssh/sshd_config and restart sshd."
+        },
+        {
+          "rule_id": "CIS-8",
+          "description": "OS patch age <= 30 days",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Ensure systems are patched automatically or within 30 days via patch management."
+        },
+        {
+          "rule_id": "CIS-9",
+          "description": "Open DB ports not public (3306 not in open_ports)",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Close public DB ports or restrict via security groups/firewall."
+        },
+        {
+          "rule_id": "CIS-10",
+          "description": "Audit rules present (auditd)",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Configure audit rules for critical files and processes."
+        }
+      ]
+    },
+    "ISO27001": {
+      "compliance_pct": 58.54,
+      "total_weight": 41,
+      "score_weight": 24,
+      "details": [
+        {
+          "rule_id": "ISO-1",
+          "description": "Access reviews performed within 90 days",
+          "status": "FAIL",
+          "message": "Expected <= 90, got 95",
+          "remediation": "Schedule and record access reviews every <= 90 days."
+        },
+        {
+          "rule_id": "ISO-2",
+          "description": "Data backup policy exists and tested",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Implement backup policy and run restore tests periodically."
+        },
+        {
+          "rule_id": "ISO-3",
+          "description": "Incident response plan exists",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Draft & publish an incident response playbook and owner matrix."
+        },
+        {
+          "rule_id": "ISO-4",
+          "description": "Incident response tested in last 12 months",
+          "status": "FAIL",
+          "message": "Expected <= 365, got 400",
+          "remediation": "Conduct IR tabletop/exercise within last 12 months."
+        },
+        {
+          "rule_id": "ISO-5",
+          "description": "Endpoint protection (AV) running",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Deploy endpoint protection on all servers/workstations."
+        },
+        {
+          "rule_id": "ISO-6",
+          "description": "Encryption at rest for sensitive DBs",
+          "status": "FAIL",
+          "message": "Expected True, got False",
+          "remediation": "Enable DB encryption (TDE or filesystem encryption) for sensitive DBs."
+        },
+        {
+          "rule_id": "ISO-7",
+          "description": "Secure configuration baseline applied (CIS)",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Apply and enforce CIS benchmarks baseline via config management."
+        },
+        {
+          "rule_id": "ISO-8",
+          "description": "Segregation of duties enforced for admin roles",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Implement role separation and approval workflows."
+        },
+        {
+          "rule_id": "ISO-9",
+          "description": "Change management process enforced",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Enforce change approvals and track them in ticketing system."
+        },
+        {
+          "rule_id": "ISO-10",
+          "description": "Third-party/vendor risk assessments done",
+          "status": "FAIL",
+          "message": "Expected True, got False",
+          "remediation": "Perform vendor risk reviews and track remediation."
+        }
+      ]
+    },
+    "RBI": {
+      "compliance_pct": 51.16,
+      "total_weight": 43,
+      "score_weight": 22,
+      "details": [
+        {
+          "rule_id": "RBI-1",
+          "description": "MFA enabled for critical systems",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Enable MFA for admin & privileged accounts using authenticator/OTP/hardware tokens."
+        },
+        {
+          "rule_id": "RBI-2",
+          "description": "Transaction logs retained for 5 years",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Configure retention for transaction logs >= 5 years in secure storage."
+        },
+        {
+          "rule_id": "RBI-3",
+          "description": "Quarterly VAPT",
+          "status": "FAIL",
+          "message": "Expected <= 90, got 120",
+          "remediation": "Run VAPT quarterly and remediate critical findings."
+        },
+        {
+          "rule_id": "RBI-4",
+          "description": "Encryption of customer data in transit and at rest",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Enable TLS 1.2+ for transit and AES-256 for data at rest."
+        },
+        {
+          "rule_id": "RBI-5",
+          "description": "Dedicated SOC monitoring in place",
+          "status": "FAIL",
+          "message": "Expected True, got False",
+          "remediation": "Deploy SOC or MSSP with 24/7 monitoring on critical channels."
+        },
+        {
+          "rule_id": "RBI-6",
+          "description": "Incident reporting to CERT-In/RBI within timelines",
+          "status": "FAIL",
+          "message": "Expected <= 7, got 10",
+          "remediation": "Report incidents to CERT-In/RBI within mandated timelines."
+        },
+        {
+          "rule_id": "RBI-7",
+          "description": "Secure coding & SAST in CI pipeline",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Integrate SAST and fix findings during CI builds."
+        },
+        {
+          "rule_id": "RBI-8",
+          "description": "Customer data access logged and reviewed monthly",
+          "status": "FAIL",
+          "message": "Expected <= 30, got 35",
+          "remediation": "Review access logs monthly for sensitive data access."
+        },
+        {
+          "rule_id": "RBI-9",
+          "description": "DLP controls in place",
+          "status": "PASS",
+          "message": "",
+          "remediation": "Deploy DLP for exfiltration control on endpoints and gateways."
+        },
+        {
+          "rule_id": "RBI-10",
+          "description": "BCP tested annually",
+          "status": "FAIL",
+          "message": "Expected <= 365, got 400",
+          "remediation": "Test BCP/DR annually and document results."
+        }
+      ]
+    }
+  }
+}
