@@ -1,0 +1,9 @@
+{
+    "mfa_enabled": false,
+    "data_encrypted": true,
+    "open_ports": [22, 80],
+    "centralized_logging": false,
+    "daily_backup": true,
+    "last_vapt_days": 120
+  }
+  

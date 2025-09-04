@@ -1,0 +1,51 @@
+[
+    {
+      "id": "ISO-001",
+      "framework": "ISO 27001",
+      "requirement": "Implement multi-factor authentication (MFA) for all privileged accounts",
+      "check_field": "mfa_enabled",
+      "expected_value": true,
+      "remediation": "Enable MFA in identity provider (Okta, Azure AD, etc.) and enforce it via policy."
+    },
+    {
+      "id": "ISO-002",
+      "framework": "ISO 27001",
+      "requirement": "Encrypt sensitive data at rest using AES-256",
+      "check_field": "data_encrypted",
+      "expected_value": true,
+      "remediation": "Enable database-level encryption (TDE) or configure disk encryption."
+    },
+    {
+      "id": "CIS-001",
+      "framework": "CIS Controls",
+      "requirement": "Disable unused ports and protocols on servers",
+      "check_field": "open_ports",
+      "expected_value": [],
+      "remediation": "Use firewall rules and configuration management to close unused ports."
+    },
+    {
+      "id": "CIS-002",
+      "framework": "CIS Controls",
+      "requirement": "Ensure centralized logging is enabled",
+      "check_field": "centralized_logging",
+      "expected_value": true,
+      "remediation": "Deploy a SIEM or central log server and configure all endpoints to forward logs."
+    },
+    {
+      "id": "RBI-001",
+      "framework": "RBI Cybersecurity",
+      "requirement": "Implement daily backup of critical financial data",
+      "check_field": "daily_backup",
+      "expected_value": true,
+      "remediation": "Automate daily backups using backup software and test restore procedures weekly."
+    },
+    {
+      "id": "RBI-002",
+      "framework": "RBI Cybersecurity",
+      "requirement": "Conduct quarterly vulnerability assessments and penetration tests",
+      "check_field": "last_vapt_days",
+      "expected_value": 90,
+      "remediation": "Engage a CERT-IN empaneled vendor to run quarterly VAPT and fix findings."
+    }
+  ]
+  
